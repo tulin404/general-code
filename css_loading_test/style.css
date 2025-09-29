@@ -1,0 +1,55 @@
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.bd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+    width: 100dvw;
+}
+
+.loading-ball {
+    border-radius: 100px;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    opacity: 0;
+}
+
+#ball-1 {
+    background-color: orange;
+    z-index: 0;
+    animation: loading 2.8s infinite;
+}
+
+#ball-2 {
+    background-color: rgb(255, 200, 97);
+    z-index: -1;
+    animation: loading 2.8s 40ms infinite;
+}
+
+#ball-3 {
+    background-color: rgb(255, 227, 174);
+    z-index: -2;
+    animation: loading 2.8s 60ms infinite;
+}
+
+@keyframes loading {
+    0% {
+        transform: translateX(-100px);
+        opacity: 1;
+
+    }
+    50% {
+        transform: translateX(100px);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-100px);
+        opacity: 1;
+    }
+}
